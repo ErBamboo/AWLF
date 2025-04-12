@@ -1,0 +1,153 @@
+@startuml newframe
+' skinparam classAttributeIconSize 0
+
+interface dev_interface {
+    + init()   : awlf_ret_t
+    + open()   : awlf_ret_t
+    + close()  : awlf_ret_t
+    + read()   : size_t
+    + write()  : size_t
+    + control(): size_t
+}
+
+' 设备基类 '
+class Device {
+    + void*             handle
+    + dev_interface*    interface
+    - struct list_head  list;
+    # uint32_t          reg_flags
+    - String            name
+    - otype_e           otype
+    - dev_status_e      status
+
+    ' Function
+    + device_init():   awlf_ret_t
+    + device_open():   awlf_ret_t
+    + device_close():  awlf_ret_t
+    + device_read():   size_t
+    + device_write():  size_t
+    + device_control():size_t
+    ' CallBack
+    # RxDoneCallBack(): void
+    # TxDoneCallBack(): void
+    # ErrCallBack():    void
+}
+Device <.. dev_interface : 依赖
+' Device end '
+
+' 串口类 '
+interface serial_interface {
+    + configure(): awlf_ret_t
+    + control():   awlf_ret_t
+    + putByte():   awlf_ret_t
+    + getByte():   uint8_t
+    + transmit():  size_t
+}
+
+class drv_serial {
+    # Device          parent
+    + serial_cfg_s    cfg
+    + serial_fifo_s   rx_fifo
+    + serial_fifo_s   tx_fifo
+    - serial_interface* interface
+    # serial_register(): awlf_ret_t
+    # serial_hw_isr():  awlf_ret_t
+    # serial_init_fifo(): awlf_ret_t
+    # serial_get_rxmask(): uint32_t
+}
+
+class stm32_usart {
+    - drv_serial         serial
+    - USART_TypeDef*     instance
+    - stm32_serial_cfg_s cfg
+    - stm32_dma_t        rx_dma
+    - stm32_dma_t        tx_dma
+    - uint32_t           rx_mask
+    ' FUNC
+    - _stm32_serial_init() :    void
+    - _stm32_dma_cfg():         void
+    - _stm32_dma_transmit():    void
+    - _stm32_dma_tx_isr():      void
+    - _stm32_rx_isr():          void
+    - _stm32_err_isr():         void
+}
+
+stm32_usart --|> drv_serial : 继承
+stm32_usart ..|> serial_interface : 实现
+
+drv_serial --|> Device : 继承
+drv_serial <.. serial_interface : 依赖
+drv_serial ..|> dev_interface : 实现
+' Serial end '
+
+' CAN类 '
+interface can_interface {
+    + configure(): awlf_ret_t 
+    + control():   awlf_ret_t
+    + putMsgs():    size_t
+    + getMsgs():    size_t
+}
+
+class drv_can {
+    # Device       parent
+    + can_cfg_s    cfg
+    + can_fifo_s   rx_fifo
+    + can_fifo_s   tx_fifo
+    - can_interface*  interface
+    # can_register(): awlf_ret_t
+    # can_hw_isr():   awlf_ret_t
+}
+
+class stm32_can {
+    - drv_can               can
+    - CAN_TypeDef*          instance
+    - stm32_can_cfg_s       cfg
+    - CAN_FilterInitTypeDef lifter_init
+    - SoftTimer             timer
+    - Mutex                 mutex
+    'FUNC
+    - _stm32_rx_isr():      void
+    - _stm32_err_isr():     void
+    - _stm32_tx_isr():      void
+    ...
+}
+
+stm32_can  --|> drv_can : 继承
+stm32_can  ..|> can_interface : 实现
+
+drv_can    --|> Device : 继承
+drv_can    <.. can_interface : 依赖
+drv_can    ..|> dev_interface : 实现
+' CAN end '
+
+interface 其他设备接口 {
+    + control():   awlf_ret_t
+    ...
+}
+
+class 其他设备抽象 {
+    # Device       parent
+    # other_cfg_s  cfg
+    # other_attr   attribute
+    ...
+    # other_register(): awlf_ret_t
+    # other_hw_isr():   awlf_ret_t
+    ...
+}
+
+class 其他硬件外设 {
+    - 其他设备抽象      other_hw_al
+    - other_hw_cfg_s   cfg
+    - other_hw_attr    attribute
+    ...
+    - other_hw_method(): awlf_ret_t
+    ...
+}
+其他硬件外设  --|> 其他设备抽象 : 继承
+其他硬件外设  ..|> 其他设备接口 : 实现
+
+其他设备抽象    --|> Device : 继承
+其他设备抽象    <.. 其他设备接口 : 依赖
+其他设备抽象    ..|> dev_interface : 实现
+
+@enduml
