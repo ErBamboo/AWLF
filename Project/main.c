@@ -1,9 +1,7 @@
 #include "stm32f4xx.h"
 #include "awlf_include.h"
-#include "serial.h"
 #include "bsp_serial.h"
 
-completion_s serial_rx_comp;
 void serial_rx_done_callback(f_device_t dev, void* itembuf, size_t itemsz)
 {
     device_write(dev, 0, itembuf, itemsz);
@@ -17,11 +15,10 @@ void SerialTestTask(void *pvParameters)
     size_t recv_len = 0;
     f_device_t serial = device_find("usart1");
     device_open(serial, OTYPE_BLOCKING_TX | OTYPE_BLOCKING_RX);
-    // device_set_rx_callback(serial, NULL);
-    // device_init(serial);
+    
     while(1)
     {
-        recv_len = device_read(serial, 0, data_buf,460);
+        recv_len = device_read(serial, 0, data_buf, 460);
         if(recv_len)
         {
             device_write(serial, 0, data_buf, 460);
@@ -50,7 +47,7 @@ int main(void)
     bsp_serial_init();
 
     vTaskStartScheduler();
-  
+
     while(1) 
     {
 

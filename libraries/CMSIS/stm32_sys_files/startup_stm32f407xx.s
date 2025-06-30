@@ -1,41 +1,35 @@
-;******************** (C) COPYRIGHT 2016 STMicroelectronics ********************
-;* File Name          : startup_stm32f40xx.s
+;*******************************************************************************
+;* File Name          : startup_stm32f407xx.s
 ;* Author             : MCD Application Team
-;* @version           : V1.8.1
-;* @date              : 27-January-2022
-;* Description        : STM32F40xxx/41xxx devices vector table for MDK-ARM toolchain. 
-;*                      Same as startup_stm32f40_41xxx.s and maintained for legacy purpose 
+;* Description        : STM32F407xx devices vector table for MDK-ARM toolchain. 
 ;*                      This module performs:
 ;*                      - Set the initial SP
 ;*                      - Set the initial PC == Reset_Handler
 ;*                      - Set the vector table entries with the exceptions ISR address
-;*                      - Configure the system clock and the external SRAM mounted on 
-;*                        STM324xG-EVAL board to be used as data memory (optional, 
-;*                        to be enabled by user)
 ;*                      - Branches to __main in the C library (which eventually
 ;*                        calls main()).
 ;*                      After Reset the CortexM4 processor is in Thread mode,
 ;*                      priority is Privileged, and the Stack is set to Main.
-;* <<< Use Configuration Wizard in Context Menu >>>   
-;******************************************************************************
+;*******************************************************************************
 ;* @attention
 ;*
-;* Copyright (c) 2016 STMicroelectronics.
+;* Copyright (c) 2017 STMicroelectronics.
 ;* All rights reserved.
 ;*
 ;* This software is licensed under terms that can be found in the LICENSE file
 ;* in the root directory of this software component.
 ;* If no LICENSE file comes with this software, it is provided AS-IS.
 ;*
-;******************************************************************************
-
+;*******************************************************************************
+;* <<< Use Configuration Wizard in Context Menu >>>
+;
 ; Amount of memory (in bytes) allocated for Stack
 ; Tailor this value to your application needs
 ; <h> Stack Configuration
 ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Stack_Size      EQU     0x00008000
+Stack_Size      EQU     0x00000400
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3
 Stack_Mem       SPACE   Stack_Size
@@ -46,7 +40,7 @@ __initial_sp
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Heap_Size       EQU     0x0008000
+Heap_Size       EQU     0x00000200
 
                 AREA    HEAP, NOINIT, READWRITE, ALIGN=3
 __heap_base
@@ -129,7 +123,7 @@ __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     TIM8_TRG_COM_TIM14_IRQHandler     ; TIM8 Trigger and Commutation and TIM14
                 DCD     TIM8_CC_IRQHandler                ; TIM8 Capture Compare                                   
                 DCD     DMA1_Stream7_IRQHandler           ; DMA1 Stream7                                           
-                DCD     FSMC_IRQHandler                   ; FSMC                                            
+                DCD     FMC_IRQHandler                    ; FMC                                             
                 DCD     SDIO_IRQHandler                   ; SDIO                                            
                 DCD     TIM5_IRQHandler                   ; TIM5                                            
                 DCD     SPI3_IRQHandler                   ; SPI3                                            
@@ -159,10 +153,11 @@ __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     OTG_HS_EP1_IN_IRQHandler          ; USB OTG HS End Point 1 In                       
                 DCD     OTG_HS_WKUP_IRQHandler            ; USB OTG HS Wakeup through EXTI                         
                 DCD     OTG_HS_IRQHandler                 ; USB OTG HS                                      
-                DCD     DCMI_IRQHandler                   ; DCMI                                            
-                DCD     CRYP_IRQHandler                   ; CRYP crypto                                     
+                DCD     DCMI_IRQHandler                   ; DCMI  
+                DCD     0                                 ; Reserved				                              
                 DCD     HASH_RNG_IRQHandler               ; Hash and Rng
                 DCD     FPU_IRQHandler                    ; FPU
+                
                                          
 __Vectors_End
 
@@ -176,7 +171,7 @@ Reset_Handler    PROC
         IMPORT  SystemInit
         IMPORT  __main
 
-                  LDR     R0, =SystemInit
+                 LDR     R0, =SystemInit
                  BLX     R0
                  LDR     R0, =__main
                  BX      R0
@@ -276,7 +271,7 @@ Default_Handler PROC
                 EXPORT  TIM8_TRG_COM_TIM14_IRQHandler     [WEAK] 
                 EXPORT  TIM8_CC_IRQHandler                [WEAK]                                   
                 EXPORT  DMA1_Stream7_IRQHandler           [WEAK]                                          
-                EXPORT  FSMC_IRQHandler                   [WEAK]                                             
+                EXPORT  FMC_IRQHandler                    [WEAK]                                             
                 EXPORT  SDIO_IRQHandler                   [WEAK]                                             
                 EXPORT  TIM5_IRQHandler                   [WEAK]                                             
                 EXPORT  SPI3_IRQHandler                   [WEAK]                                             
@@ -306,11 +301,10 @@ Default_Handler PROC
                 EXPORT  OTG_HS_EP1_IN_IRQHandler          [WEAK]                      
                 EXPORT  OTG_HS_WKUP_IRQHandler            [WEAK]                        
                 EXPORT  OTG_HS_IRQHandler                 [WEAK]                                      
-                EXPORT  DCMI_IRQHandler                   [WEAK]                                             
-                EXPORT  CRYP_IRQHandler                   [WEAK]                                     
+                EXPORT  DCMI_IRQHandler                   [WEAK]                                                                                 
                 EXPORT  HASH_RNG_IRQHandler               [WEAK]
                 EXPORT  FPU_IRQHandler                    [WEAK]
-
+                
 WWDG_IRQHandler                                                       
 PVD_IRQHandler                                      
 TAMP_STAMP_IRQHandler                  
@@ -359,7 +353,7 @@ TIM8_UP_TIM13_IRQHandler
 TIM8_TRG_COM_TIM14_IRQHandler  
 TIM8_CC_IRQHandler                                               
 DMA1_Stream7_IRQHandler                                                 
-FSMC_IRQHandler                                                            
+FMC_IRQHandler                                                            
 SDIO_IRQHandler                                                            
 TIM5_IRQHandler                                                            
 SPI3_IRQHandler                                                            
@@ -389,11 +383,10 @@ OTG_HS_EP1_OUT_IRQHandler
 OTG_HS_EP1_IN_IRQHandler                            
 OTG_HS_WKUP_IRQHandler                                
 OTG_HS_IRQHandler                                                   
-DCMI_IRQHandler                                                            
-CRYP_IRQHandler                                                    
+DCMI_IRQHandler                                                                                                             
 HASH_RNG_IRQHandler
-FPU_IRQHandler
-   
+FPU_IRQHandler  
+           
                 B       .
 
                 ENDP
@@ -427,4 +420,3 @@ __user_initial_stackheap
                  ENDIF
 
                  END
-

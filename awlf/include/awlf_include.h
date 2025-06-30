@@ -8,8 +8,9 @@
 
 /***** Frame component *****/
 #include "../component/include/f_device.h"   /* 设备基类 */
-#include "../component/include/f_mem.h"     /* 内存管理 */
+#include "../component/include/f_mem.h"      /* 内存管理 */
 #include "../middlewire/f_middlewire.h"      /* 中间件 */
+
 
 #endif
 

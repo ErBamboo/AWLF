@@ -5,10 +5,8 @@
   "srcDirs": [
     "libraries",
     "bsp",
-    "driver",
     "awlf",
     "Project",
-    "data_struct",
     "midwire"
   ],
   "virtualFolder": {
@@ -26,14 +24,15 @@
     "Debug": {
       "excludeList": [
         "libraries/CMSIS/arm_math",
-        "data_struct/output"
+        "data_struct/output",
+        "libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c"
       ],
       "toolchain": "AC6",
       "compileConfig": {
         "cpuType": "Cortex-M4",
         "floatingPointHardware": "single",
         "useCustomScatterFile": false,
-        "scatterFilePath": "<YOUR_SCATTER_FILE>.sct",
+        "scatterFilePath": "Project\\engineering.sct",
         "storageLayout": {
           "RAM": [
             {
@@ -50,7 +49,7 @@
               "tag": "IRAM",
               "id": 2,
               "mem": {
-                "startAddr": "0x20000",
+                "startAddr": "0x10000000",
                 "size": "0x10000"
               },
               "isChecked": false,
@@ -63,7 +62,7 @@
               "id": 1,
               "mem": {
                 "startAddr": "0x8000000",
-                "size": "0x80000"
+                "size": "0x100000"
               },
               "isChecked": true,
               "isStartup": true
@@ -78,7 +77,7 @@
         "baseAddr": "",
         "cpuInfo": {
           "vendor": "ST",
-          "cpuName": "STM32F407VE"
+          "cpuName": "STM32F407IG"
         },
         "proType": 1,
         "speed": 8000,
@@ -90,12 +89,9 @@
         "incList": [
           ".",
           "bsp",
-          "driver",
           "libraries/STM32F4xx_StdPeriph_Driver",
           "libraries/CMSIS/stm32_sys_files",
           "libraries/STM32F4xx_StdPeriph_Driver/inc",
-          "data_struct",
-          "driver/inc",
           "libraries/CMSIS/Include",
           "awlf/include",
           "midwire/FreeRTOS",
@@ -103,13 +99,16 @@
           "midwire/FreeRTOS/portable/RVDS/ARM_CM4F",
           "Project",
           "awlf/middlewire",
-          "awlf/middlewire/inc"
+          "awlf/middlewire/inc",
+          "awlf/driver/inc",
+          "awlf/data_struct"
         ],
         "libList": [],
         "defineList": [
-          "STM32F40_41xxx",
           "USE_STDPERIPH_DRIVER",
-          "__TARGET_FPU_VFP"
+          "__TARGET_FPU_VFP",
+          "STM32F40_41xxx",
+          "__FPU_PRESENT=1"
         ]
       },
       "builderOptions": {

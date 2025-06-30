@@ -16,10 +16,10 @@
 
 #define AWLF_NULL   ((void*)0)
 
-#define __AWLF_VERSION__ "1.0.0"
-#define __AWLF_AUTHOR__ "Bamboo"
-#define __AWLF_COPYRIGHT__ "Copyright (c) 2025 Bamboo"
-#define __AWLF_VERSION_INFO__ "AWLF Version: " __AWLF_VERSION__ " (" __AWLF_AUTHOR__ ")"
+#define __AWLF_VERSION__        "1.0.0"
+#define __AWLF_AUTHOR__         "Bamboo"
+#define __AWLF_COPYRIGHT__      "Copyright (c) 2025 Bamboo"
+#define __AWLF_VERSION_INFO__   "AWLF Version: " __AWLF_VERSION__ " (" __AWLF_AUTHOR__ ")"
 
 
 
