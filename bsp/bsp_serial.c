@@ -63,11 +63,16 @@ static void _stm32_serial_init(stm32_serial_t handle)
             NVIC_InitStructure = SERIAL1_NVIC_INIT;
         break;
 #endif
-#ifdef USE_SERIAL_2
-        case (uint32_t)SERIAL2_INSTANCE:
-            SERIAL2_CLK_CMD(SERIAL2_CLK, ENABLE);
-            SERIAL2_GPIO_CLK_CMD(SERIAL2_GPIO_CLK, ENABLE);
-            GPIOx = SERIAL2_GPIO_PORT;
+#ifdef USE_SERIAL_3
+        case (uint32_t)SERIAL3_INSTANCE:
+            tx_gpio_source = SERIAL3_TX_SOURCE;
+            rx_gpio_source = SERIAL3_RX_SOURCE;
+            tx_gpio_pin = SERIAL3_TX_PIN;
+            rx_gpio_pin = SERIAL3_RX_PIN;
+            tx_gpio_af = SERIAL3_TX_AF;
+            rx_gpio_af = SERIAL3_RX_AF;
+            GPIOx = SERIAL3_GPIO_PORT;
+            NVIC_InitStructure = SERIAL3_NVIC_INIT;
         break;
 #endif
     }
@@ -383,6 +388,35 @@ static void bsp_get_cfg(void)
         SERIAL1_CLK_CMD(SERIAL1_CLK, ENABLE);
         SERIAL1_GPIO_CLK_CMD(SERIAL1_GPIO_CLK, ENABLE);
     #endif
+
+    #ifdef USE_SERIAL_3
+        /* FIFO */
+        #ifdef USE_SERIAL3_TXFIFO
+            handler[SERIAL3_IDX].serial.cfg.txbufsz = SERIAL3_TXFIFO_SIZE;
+            handler[SERIAL3_IDX].serial.__priv.tx_fifo = &SERIAL3_TX_FIFO;
+        #endif
+        #ifdef USE_SERIAL3_RXFIFO
+            handler[SERIAL3_IDX].serial.cfg.rxbufsz = SERIAL3_RXFIFO_SIZE;
+            handler[SERIAL3_IDX].serial.__priv.rx_fifo = &SERIAL3_RX_FIFO;
+        #endif
+        /* TXDMA */
+        #ifdef USE_SERIAL3_DMA_TX
+            handler[SERIAL3_IDX].tx_dma = &SERIAL3_DMA_TX;
+            DMA_RCC_CMD(SERIAL3_DMA_TX.cfg.rcc, ENABLE);
+        #endif
+        /* RXDMA */
+        #ifdef USE_SERIAL3_DMA_RX
+            handler[SERIAL3_IDX].rx_dma = &SERIAL3_RX_DMA;
+            DMA_RCC_CMD(SERIAL3_RX_DMA.cfg.rcc, ENABLE);
+            /*  DMA DoubleBufferMode */
+            #ifdef BSP_USE_SERIAL3_DMA_TWOBUF
+                SERIAL3_RX_DMA.bufs[1].buf = SERIAL3_DMA_DOUBLE_RXBUF;
+                SERIAL3_RX_DMA.bufs[1].bufsz = SERIAL3_RXFIFO_SIZE;
+            #endif
+        #endif
+        SERIAL3_CLK_CMD(SERIAL3_CLK, ENABLE);
+        SERIAL3_GPIO_CLK_CMD(SERIAL3_GPIO_CLK, ENABLE);
+    #endif
 }
 
 void bsp_serial_init(void)
@@ -398,6 +432,8 @@ void bsp_serial_init(void)
 
 static void _stm32_dma_tx_isr(stm32_serial_t handle);
 static void _stm32_rx_isr(stm32_serial_t handle, stm32_serial_rx_event event);
+
+#ifdef USE_SERIAL_1
 void USART1_IRQHandler(void)
 {
     if(USART_GetITStatus(USART1, USART_IT_TXE) != RESET) {
@@ -444,6 +480,55 @@ void USART1_DMA_Rx_Handler(void)
         _stm32_rx_isr(handle, DMA_TC);
     }
 }
+#endif
+
+#ifdef USE_SERIAL_3
+void USART3_IRQHandler(void)
+{
+    if(USART_GetITStatus(USART3, USART_IT_TXE) != RESET) {
+        USART_ClearITPendingBit(USART3, USART_IT_TXE);
+        serial_hw_isr(&handler[SERIAL3_IDX].serial, SERIAL_EVENT_INT_TXDONE, NULL, 0);
+    }
+    if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET) {
+        uint8_t data = USART_ReceiveData(USART3);
+        USART_ClearITPendingBit(USART3, USART_IT_RXNE);
+        serial_hw_isr(&handler[SERIAL3_IDX].serial, SERIAL_EVENT_INT_RXDONE, &data, 1);
+    }
+    if(USART_GetITStatus(USART3,USART_IT_IDLE) != RESET)
+    {
+        USART_ReceiveData(USART3);
+        USART_ClearITPendingBit(USART3, USART_IT_IDLE);
+        if(handler[SERIAL3_IDX].cfg.regflags & REG_DMA_RX)
+            _stm32_rx_isr(&handler[SERIAL3_IDX], IDLE);
+    }
+}
+
+// 串口1发送DMA服务函数
+void USART3_DMA_Tx_Handler(void)
+{
+    stm32_serial_t handle = &handler[SERIAL3_IDX];
+    if(DMA_GetITStatus(handle->tx_dma->stream, handle->tx_dma->cfg.itflag_tc) != RESET)
+    {
+        DMA_ClearITPendingBit(handle->tx_dma->stream, handle->tx_dma->cfg.itflag_tc);
+        _stm32_dma_tx_isr(handle);
+    }
+}
+void USART3_DMA_Rx_Handler(void)
+{
+    stm32_serial_t handle = &handler[SERIAL3_IDX];
+    if(DMA_GetITStatus(handle->rx_dma->stream, handle->rx_dma->cfg.itflag_ht) != RESET)
+    {
+        DMA_ClearITPendingBit(handle->rx_dma->stream, handle->rx_dma->cfg.itflag_ht);
+        _stm32_rx_isr(handle, DMA_HT);
+    }
+
+    if(DMA_GetITStatus(handle->rx_dma->stream, handle->rx_dma->cfg.itflag_tc) != RESET)
+    {
+        DMA_ClearITPendingBit(handle->rx_dma->stream, handle->rx_dma->cfg.itflag_tc);
+        _stm32_rx_isr(handle, DMA_TC);
+    }
+}
+#endif
 
 static void _stm32_dma_tx_isr(stm32_serial_t handle)
 {

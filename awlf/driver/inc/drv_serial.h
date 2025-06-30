@@ -8,7 +8,7 @@ typedef struct serial_interface* serial_interface_t;
 typedef struct drv_serial* drv_serial_t;
 
 /*  configure the serial */
-#define USE_SERIAL_1 
+ #define USE_SERIAL_1 
 // #define USE_SERIAL_2 
 // #define USE_SERIAL_3
 // #define USE_SERIAL_4
@@ -20,8 +20,8 @@ typedef struct drv_serial* drv_serial_t;
 #define USE_SERIAL1_DMA_RX
 // #define USE_SERIAL2_DMA_TX
 // #define USE_SERIAL2_DMA_RX
-// #define USE_SERIAL3_DMA_TX
-// #define USE_SERIAL3_DMA_RX
+#define USE_SERIAL3_DMA_TX
+#define USE_SERIAL3_DMA_RX
 // #define USE_SERIAL4_DMA_TX
 // #define USE_SERIAL4_DMA_RX
 // #define USE_SERIAL5_DMA_TX
@@ -33,8 +33,8 @@ typedef struct drv_serial* drv_serial_t;
 #define USE_SERIAL1_RXFIFO
 // #define USE_SERIAL2_TXFIFO
 // #define USE_SERIAL2_RXFIFO
-// #define USE_SERIAL3_TXFIFO
-// #define USE_SERIAL3_RXFIFO
+#define USE_SERIAL3_TXFIFO
+#define USE_SERIAL3_RXFIFO
 // #define USE_SERIAL4_TXFIFO
 // #define USE_SERIAL4_RXFIFO
 // #define USE_SERIAL5_TXFIFO

@@ -6,14 +6,13 @@
 typedef struct dev_interface* dev_interface_t;
 typedef struct f_device* f_device_t;
 
-
 typedef struct dev_interface {
     awlf_ret_t (*init)   (f_device_t dev);
     awlf_ret_t (*open)   (f_device_t dev, otype_e otype);
     awlf_ret_t (*close)  (f_device_t dev);
     size_t     (*read)   (f_device_t dev, void* pos, void *data, size_t len);
     size_t     (*write)  (f_device_t dev, void* pos, void *data, size_t len);
-    size_t     (*control)(f_device_t dev, size_t cmd, void* args);
+    awlf_ret_t (*control)(f_device_t dev, size_t cmd, void* args);
 } dev_interface_s;
 
 typedef struct dev_attr* dev_attr_t;
