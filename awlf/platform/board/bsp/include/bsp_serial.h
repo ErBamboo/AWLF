@@ -2,7 +2,7 @@
 #define __STM32_SERIAL_H__
 
 #include "stm32f4xx.h"
-#include "awlf_hal.h"
+#include "hal/device/hal_serial.h"
 #include "bsp_dma.h"
 
 typedef struct stm32_serial_cfg

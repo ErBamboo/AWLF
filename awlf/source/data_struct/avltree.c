@@ -1,4 +1,4 @@
-#include "inc/avltree.h"
+#include "data_struct/avltree.h"
 #include "stdlib.h"
 #include <stdio.h>
 #include <string.h>

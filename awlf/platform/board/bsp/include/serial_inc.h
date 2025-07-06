@@ -2,7 +2,7 @@
 #define __SERIAL_INC__H
 
 #include "stm32f4xx.h"
-#include "awlf_hal.h"
+#include "hal/awlf_hal.h"
 #include "bsp_serial.h"
 #include "bsp_dma.h"
 

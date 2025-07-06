@@ -1,10 +1,10 @@
-#ifndef __DEVICE_H__
-#define __DEVICE_H__
+#ifndef __AWLF_DEVICE_H__
+#define __AWLF_DEVICE_H__
 
 #include <stddef.h>
 #include <stdint.h>
-#include "corelist.h"
-#include "awlf_def.h"
+#include "data_struct/corelist.h"
+#include "awlf/awlf_def.h"
 
 typedef struct dev_interface* dev_interface_t;
 typedef struct device* device_t;
@@ -57,4 +57,4 @@ void CLR_DEV_STATUS(device_t dev, uint32_t _status);
 uint32_t IS_DEV_STATUS_SET(device_t dev, uint32_t _status);
 
 
-#endif // __DEVICE_H__
+#endif // __AWLF_DEVICE_H__

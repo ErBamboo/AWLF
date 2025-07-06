@@ -3,9 +3,9 @@
 
 
 #include <stdint.h>
-#include "awlf_device.h"
-#include "completion.h"
-#include "ringbuffer.h"
+#include "core/awlf_device.h"
+#include "itc/completion.h"
+#include "data_struct/ringbuffer.h"
 
 #ifdef __cplusplus
 extern "C" {

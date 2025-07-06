@@ -2,7 +2,7 @@
 #define __AWLF_API_H__
 
 #include "port/awlf_port_hw.h"          /* 硬件相关API */
-#include "port/awlf_port_compiler.h"    /* 编译器相关API */
+#include "port/awlf_port_compiler.h"   /* 编译器相关API */
 
 /* 硬件中断 */
 #define hw_enable_irq()         port_enable_irq()

@@ -1,5 +1,5 @@
-#ifndef __CORE_PORT_H__
-#define __CORE_PORT_H__
+#ifndef __AWLF_PORT__HW_H__
+#define __AWLF_PORT__HW_H__
 
 /* hw port files 根据实际情况替换 */
 #include "stm32f4xx.h"
@@ -26,4 +26,4 @@ extern "C" {
 }
 #endif
 
-#endif /* __CORE_PORT_H__ */
+#endif /* __AWLF_PORT__HW_H__ */
