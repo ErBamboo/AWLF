@@ -3,11 +3,8 @@
   "type": "ARM",
   "dependenceList": [],
   "srcDirs": [
-    "libraries",
-    "bsp",
     "awlf",
-    "Project",
-    "midwire"
+    "Project"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
@@ -88,20 +85,16 @@
         "name": "default",
         "incList": [
           ".",
-          "bsp",
-          "libraries/STM32F4xx_StdPeriph_Driver",
-          "libraries/CMSIS/stm32_sys_files",
-          "libraries/STM32F4xx_StdPeriph_Driver/inc",
-          "libraries/CMSIS/Include",
+          "awlf/platform/board/bsp/include",
+          "awlf/platform/board/libraries/STM32F4xx_StdPeriph_Driver/inc",
+          "awlf/platform/board/libraries/CMSIS/cmsis_board_include",
+          "awlf/platform/board/libraries/CMSIS/Include",
+          "awlf/platform/FreeRTOS/include",
           "awlf/include",
-          "midwire/FreeRTOS",
-          "midwire/FreeRTOS/include",
-          "midwire/FreeRTOS/portable/RVDS/ARM_CM4F",
-          "Project",
-          "awlf/middlewire",
-          "awlf/middlewire/inc",
-          "awlf/driver/inc",
-          "awlf/data_struct"
+          "awlf/platform/FreeRTOS/portable",
+          "awlf/data_struct/inc",
+          "awlf/itc/inc",
+          "awlf/hal"
         ],
         "libList": [],
         "defineList": [
