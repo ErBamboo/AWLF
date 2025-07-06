@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ringbuffer.h"
+#include "inc/ringbuffer.h"
 
 #define is_num_power_of_two(x) ((x) && !(((x) & ((x) - 1))))
 
@@ -109,12 +109,6 @@ static void inline ringbuf_copy_in(ringbuf_t rb, const void* src, unsigned int l
 
 	memcpy(rb->buf + off, src, l);
 	memcpy(rb->buf, (const unsigned char*)src + l, len - l);
-
-	/*
-	 * make sure that the data in the fifo is up to date before
-	 * incrementing the fifo->in index counter
-	 */
-	smp_wmb();
 }
 
 unsigned int ringbuf_in(ringbuf_t rb, const void* buf, unsigned int item_count) 
@@ -145,11 +139,7 @@ static void inline ringbuf_copy_out(ringbuf_t rb, void* dst, unsigned int len, u
 
 	memcpy(dst, rb->buf + off, l);
 	memcpy((unsigned char*)dst + l, rb->buf, len - l);
-	/*
-	 * make sure that the data is copied before
-	 * incrementing the fifo->out index counter
-	 */
-	smp_wmb();
+	
 }
 
 unsigned int ringbuf_out(ringbuf_t rb, void* buf, unsigned int item_count) 
