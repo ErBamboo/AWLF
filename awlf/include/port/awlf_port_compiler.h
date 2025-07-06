@@ -1,5 +1,5 @@
-#ifndef __AWLF_COMPILER_H__
-#define __AWLF_COMPILER_H__
+#ifndef __AWLF_PORT_COMPILER_H__
+#define __AWLF_PORT_COMPILER_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -26,4 +26,4 @@ extern "C" {
 }
 #endif
 
-#endif // __AWLF_COMPILER_H__
+#endif // __AWLF_PORT_COMPILER_H__

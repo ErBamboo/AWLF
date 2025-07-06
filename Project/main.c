@@ -2,7 +2,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-#include "awlf_device.h"
+#include "hal/awlf_hal.h" 
 #include "bsp_serial.h"
 
 void serial_rx_done_callback(device_t dev, void* itembuf, size_t itemsz)

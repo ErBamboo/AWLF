@@ -1,6 +1,6 @@
 #include <string.h>
-#include "awlf_device.h"
-#include "awlf_api.h"
+#include "hal/device/core/awlf_device.h"
+#include "awlf/awlf_api.h"
 
 static LIST_HEAD(dev_list);
 

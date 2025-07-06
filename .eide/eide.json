@@ -74,7 +74,7 @@
         "baseAddr": "",
         "cpuInfo": {
           "vendor": "ST",
-          "cpuName": "STM32F407IG"
+          "cpuName": "STM32F407VG"
         },
         "proType": 1,
         "speed": 8000,
@@ -90,11 +90,9 @@
           "awlf/platform/board/libraries/CMSIS/cmsis_board_include",
           "awlf/platform/board/libraries/CMSIS/Include",
           "awlf/platform/FreeRTOS/include",
-          "awlf/include",
           "awlf/platform/FreeRTOS/portable",
           "awlf/data_struct/inc",
-          "awlf/itc/inc",
-          "awlf/hal"
+          "awlf/include"
         ],
         "libList": [],
         "defineList": [

@@ -1,7 +1,7 @@
-#include "../inc/hal_serial.h"
+#include "hal/device/hal_serial.h"
 #include <stdlib.h>
-#include "awlf_api.h"
-#include "completion.h"
+#include "awlf/awlf_api.h"
+#include "itc/completion.h"
 
 /************************** PRIVATE FUNC ********************************************************/
 

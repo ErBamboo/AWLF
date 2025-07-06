@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <string.h>
 #include <stdlib.h>
-#include "inc/ringbuffer.h"
+#include "data_struct/ringbuffer.h"
 
 #define is_num_power_of_two(x) ((x) && !(((x) & ((x) - 1))))
 

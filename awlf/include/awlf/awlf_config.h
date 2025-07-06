@@ -1,5 +1,5 @@
-#ifndef __CORE_CONFIG_H__
-#define __CORE_CONFIG_H__
+#ifndef __AWLF_CONFIG_H__
+#define __AWLF_CONFIG_H__
 
 #define FRAME_WITH_RTOS     1
 
@@ -9,4 +9,4 @@
 #define __AWLF_USE_HAL_SERIALS__ 
 
 
-#endif
+#endif  // __AWLF_CONFIG_H__

@@ -1,5 +1,5 @@
-#ifndef __CORE_DEF_H__
-#define __CORE_DEF_H__
+#ifndef __AWLF_DEF_H__
+#define __AWLF_DEF_H__
 
 #define AWLF_NULL   ((void*)0)
 
@@ -93,4 +93,4 @@ typedef enum dev_status {
     DEV_STATUS_OPENED   = 0x01 << 8,        // 设备打开
 } dev_status_e;
 
-#endif
+#endif  // __AWLF_DEF_H__
