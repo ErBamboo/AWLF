@@ -297,10 +297,10 @@ static size_t serial_write(device_t dev, void* pos, void *data, size_t len)
         return 0;
     }
 
-    if(DEV_GET_OPARAMS(dev) & OPARAM_BLOCKING_TX)
-        ret_len = _serial_tx_block(dev, pos, data, len);
-    else if(DEV_GET_OPARAMS(dev) & OPARAM_NON_BLOCKING_TX)
+    if(DEV_GET_OPARAMS(dev) & OPARAM_NON_BLOCKING_TX || xPortIsInsideInterrupt())   // 在中断中只能使用非阻塞发送
         ret_len = _serial_tx_nonblock(dev, pos, data, len);
+    else if(DEV_GET_OPARAMS(dev) & OPARAM_BLOCKING_TX)
+        ret_len = _serial_tx_block(dev, pos, data, len);
     else
         ret_len = _serial_tx_poll(dev, pos, data, len);
     CLR_DEV_STATUS(dev, DEV_STATUS_BUSY_TX);
