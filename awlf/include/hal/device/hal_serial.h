@@ -87,8 +87,8 @@ typedef enum flow_ctrl {
 typedef enum serial_event {
     SERIAL_EVENT_INT_TXDONE = 0x01, // 中断发送
     SERIAL_EVENT_INT_RXDONE = 0x02, // 中断接收
-    SERIAL_EVENT_DMATXDONE  = 0x03,     // DMA发送完成
-    SERIAL_EVENT_DMARXDONE  = 0x04,     // DMA接收完成
+    SERIAL_EVENT_DMA_TXDONE  = 0x03,     // DMA发送完成
+    SERIAL_EVENT_DMA_RXDONE  = 0x04,     // DMA接收完成
     SERIAL_EVENT_ERR        = 0x05,     // 错误中断
 } serial_event_e;
 
@@ -137,9 +137,9 @@ typedef struct serial_interface {
 
 typedef struct serial_fifo* serial_fifo_t;
 typedef struct serial_fifo {
-    ringbuf_s     rb;             // 环形缓冲区
-    completion_s  cpt;            // 完成信号
-    uint16_t      load_size;      // 串口正在加载的数据长度（即正在发送、接收的数据长度）
+    ringbuf_s    rb;               // 环形缓冲区
+    completion_s cpt;              // 完成信号
+    size_t       load_size;        // 串口加载的总数据长度
 }serial_fifo_s;
 
 typedef struct serial_priv* serial_priv_t;
@@ -158,8 +158,8 @@ typedef struct hal_serial {
 
 awlf_ret_t serial_register(hal_serial_t serial, char* name, void* handle, uint32_t regflag);
 awlf_ret_t serial_hw_isr(hal_serial_t serial, serial_event_e event, void* arg, size_t arg_size);
-awlf_ret_t serial_init_fifo(hal_serial_t serial, serial_fifo_t fifo, uint8_t* buf, size_t bufsz);
-inline serial_fifo_t serial_get_rxfifo(hal_serial_t serial);
+serial_fifo_t serial_get_rxfifo(hal_serial_t serial);
+serial_fifo_t serial_get_txfifo(hal_serial_t serial);
 uint32_t serial_get_rxmask(hal_serial_t serial);
 
 #ifdef __cplusplus

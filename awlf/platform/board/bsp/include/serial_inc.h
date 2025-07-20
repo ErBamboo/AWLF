@@ -123,7 +123,7 @@
     /*  USART1实例配置参数 */                                                                                         
     #define SERIAL1_BSP_CFG (stm32_serial_cfg_s){           \
         .name = "usart1",                                   \
-        .regflags = REG_DMA_RX | REG_DMA_TX | REG_IRQ_TX | REG_IRQ_RX,   \
+        .regparams = REG_PARAM_INT_TX | REG_PARAM_INT_TX,   \
         .init = SERIAL1_BASE_INIT,                          \
     }  
 

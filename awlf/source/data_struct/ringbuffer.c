@@ -27,7 +27,7 @@ inline unsigned int ringbuf_len(const ringbuf_t rb)
 // max item count in buf
 inline unsigned int ringbuf_cap(const ringbuf_t rb) 
 {
-	return rb->mask + 1;
+	return (rb->mask + 1);
 }
 
 // avail item count
@@ -174,9 +174,9 @@ unsigned int ringbuf_get_linear_space(ringbuf_t rb, void** dest)
 	*dest = &rb->buf[out_off * rb->esize];
 
 	if (out_off < in_off)
-		linear_size = in_off - out_off;
-	if (out_off > in_off || ringbuf_is_full(rb))
-		linear_size = ringbuf_cap(rb) - out_off;
+	 	linear_size = in_off - out_off;
+	else if (out_off > in_off || ringbuf_is_full(rb))
+	 	linear_size = ringbuf_cap(rb) - out_off;
 
 	return linear_size;
 }

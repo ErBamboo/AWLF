@@ -2,33 +2,36 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-#include "hal/awlf_hal.h" 
+#include "awlf/awlf_api.h"
+#include "hal/awlf_hal.h"
 #include "bsp_serial.h"
 
-void serial_rx_done_callback(device_t dev, void* itembuf, size_t itemsz)
+size_t  recv_len = 0;
+TaskHandle_t serial_task_handle;
+void serial_rd_cb(device_t dev, void* param, size_t paramsz)
 {
-    device_write(dev, 0, itembuf, itemsz);
+    
 }
 
-void SerialTestTask(void *pvParameters) 
+void SerialTestTask(void *pvParameters)
 {
+    uint16_t rx_len = 0;
     uint8_t data_buf[500] = {1,2,3,4,5,6,7,8,9,10};
-    uint8_t recv_buf[100] = {0};
-    size_t recv_len = 0;
     device_t serial = device_find("usart1");
-    device_open(serial, OTYPE_BLOCKING_TX | OTYPE_BLOCKING_RX);
+    device_open(serial, OPARAM_NON_BLOCKING_TX | OPARAM_BLOCKING_RX);
+    device_set_rd_cb(serial, serial_rd_cb);
     
     while(1)
     {
-        recv_len = device_read(serial, 0, data_buf, 460);
-        if(recv_len)
-        {
-            device_write(serial, 0, data_buf, 460);
-        }
+        // rx_len = device_read(serial, NULL, data_buf, 1);
+        // if(rx_len)
+        // {
+        //     device_write(serial, NULL, data_buf, rx_len);
+        // }
     }
 }
 
-int main(void) 
+int main(void)
 {
 
     TaskHandle_t task1;
@@ -47,7 +50,7 @@ int main(void)
 
     vTaskStartScheduler();
 
-    while(1) 
+    while(1)
     {
 
     }

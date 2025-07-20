@@ -63,7 +63,8 @@
             "span": "c",
             "stdexcept": "c",
             "text_encoding": "c",
-            "compare": "c"
+            "compare": "c",
+            "queue": "c"
         },
         "[yaml]": {
             "editor.insertSpaces": true,

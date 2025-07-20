@@ -4,19 +4,19 @@
 
 static LIST_HEAD(dev_list);
 
-inline static uint8_t IS_DEV_OTYPE_NOT_SET(device_t dev, otype_e otype)
+inline static uint8_t IS_DEV_OTYPE_NOT_SET(device_t dev, oparam_e oparams)
 {
-    return (otype & (~dev->__priv.otype));
+    return (oparams & (~dev->__priv.oparams));
 }
 
-inline uint32_t DEV_GET_REGFLAGS(device_t dev)
+inline uint32_t DEV_GET_REGPARAMS(device_t dev)
 {
-    return dev->__priv.reg_falgs;
+    return dev->__priv.regparams;
 }
 
-inline uint32_t DEV_GET_OTYPE(device_t dev)
+inline uint32_t DEV_GET_OPARAMS(device_t dev)
 {
-    return dev->__priv.otype;
+    return dev->__priv.oparams;
 }
 
 inline void SET_DEV_STATUS(device_t dev, uint32_t _status)
@@ -41,14 +41,17 @@ device_t device_find(char* name)
     if(!name) return NULL;
     primask = awlf_hw_disable_irq();
     list_for_each_entry(dev_pos, &dev_list, list) {
-        if(strcmp(dev_pos->__priv.name, name) == 0) 
-            return dev_pos;
+        if(strcmp(dev_pos->__priv.name, name) == 0)
+        {
+            awlf_hw_enable_irq(primask);
+            return dev_pos;    
+        }
     }
     awlf_hw_enable_irq(primask);
     return NULL;
 }
 
-awlf_ret_t device_register(device_t dev, char* name, uint32_t reg_flags)
+awlf_ret_t device_register(device_t dev, char* name, regparam_e regparams)
 {
     uint32_t    primask;
     if(!dev || !name) return AWLF_ERROR_PARAM;
@@ -62,7 +65,7 @@ awlf_ret_t device_register(device_t dev, char* name, uint32_t reg_flags)
     awlf_hw_enable_irq(primask);
 
     dev->__priv.name = name;
-    dev->__priv.reg_falgs = reg_flags;
+    dev->__priv.regparams = regparams;
     dev->__priv.status |= DEV_STATUS_REGED;
     return AWLF_OK;
 }
@@ -94,11 +97,10 @@ awlf_ret_t device_init(device_t dev)
     return AWLF_OK;
 }
 
-awlf_ret_t device_open(device_t dev, otype_e otype)
+awlf_ret_t device_open(device_t dev, oparam_e oparams)
 {
     while(!dev || !dev->ops){};
     awlf_ret_t ret = AWLF_ERROR;
-
     if(!IS_DEV_STATUS_SET(dev, DEV_STATUS_INITED))
     {
         if(dev->ops->init)
@@ -111,21 +113,22 @@ awlf_ret_t device_open(device_t dev, otype_e otype)
         SET_DEV_STATUS(dev, DEV_STATUS_INITED);
     }
     
-    if(!IS_DEV_STATUS_SET(dev, DEV_STATUS_OPENED) || IS_DEV_OTYPE_NOT_SET(dev, otype))
+    if(!IS_DEV_STATUS_SET(dev, DEV_STATUS_OPENED) || IS_DEV_OTYPE_NOT_SET(dev, oparams))
     {
         if(dev->ops->open)
-            ret = dev->ops->open(dev, otype);
+            ret = dev->ops->open(dev, oparams);
         if(ret != AWLF_OK)
         {
             //@todo log
             return ret;
         }
         SET_DEV_STATUS(dev, DEV_STATUS_OPENED);
-        dev->__priv.otype |= otype;
+        dev->__priv.oparams |= oparams;
     }
 
     return AWLF_OK;
 }
+
 
 size_t device_read(device_t dev, void* pos, void *data, size_t len)
 {
@@ -175,19 +178,19 @@ awlf_ret_t device_close(device_t dev)
     return AWLF_OK;
 }
 
-void device_set_rx_callback(device_t dev, void (*callback)(device_t dev, void* itembuf, size_t itemsz))
+void device_set_rd_cb(device_t dev, void (*callback)(device_t dev, void* params, size_t paramsz))
 {
     while(!dev){};
-    dev->__priv.rxdone_callback = callback;
+    dev->__priv.rd_callback = callback;
 }
 
-void device_set_tx_callback(device_t dev, void (*callback)(device_t dev, void* itembuf, size_t itemsz))
+void device_set_wd_cb(device_t dev, void (*callback)(device_t dev, void* params, size_t paramsz))
 {
     while(!dev){};
-    dev->__priv.txdone_callback = callback;
+    dev->__priv.wd_callback = callback;
 }
 
-void device_set_err_callback(device_t dev, void (*callback)(device_t dev, uint16_t errcode))
+void device_set_err_cb(device_t dev, void (*callback)(device_t dev, uint16_t errcode))
 {
     while(!dev){};
     dev->__priv.err_callback = callback;
