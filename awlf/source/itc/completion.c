@@ -83,7 +83,7 @@ awlf_ret_t completion_done(completion_t c)
     if(!c) return AWLF_ERROR_PARAM;
     primask = awlf_hw_disable_irq();
 
-    /* 存在一种情况：多次通知，但是等待方未来得及响应，此时不重复操作 */
+    /* 存在一种情况：多次完成，但是等待方未来得及响应，此时不重复操作 */
     if(c->is_done == COMP_DONE)
     {
         awlf_hw_enable_irq(primask);
@@ -115,7 +115,7 @@ void completion_init(completion_t c, uint32_t event)
 {
     uint32_t   primask;
     primask = awlf_hw_disable_irq();
-    c->is_done     = COMP_INIT;
+    c->is_done    = COMP_INIT;
     c->comp_event = event;
     awlf_hw_enable_irq(primask);
 }

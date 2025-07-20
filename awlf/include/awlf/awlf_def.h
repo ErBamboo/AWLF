@@ -30,22 +30,11 @@ typedef enum
     AWLF_ERROR_NOT_SUPPORT,    // 不支持的操作
 } awlf_ret_t;
 
-/* 传输模式（通信类外设使用） */
-typedef enum hw_trans_type 
-{
-    HW_POLL_TX = 0x01,      // 轮询发送
-    HW_POLL_RX = 0x01 << 1, // 轮询接收
-    HW_DMA_TX  = 0x01 << 2, // DMA发送
-    HW_DMA_RX  = 0x01 << 3, // DMA接收
-    HW_IRQ_TX  = 0x01 << 4, // 中断发送
-    HW_IRQ_RX  = 0x01 << 5, // 中断接收
-} hw_trans_type_e;
-
 /* Ctrl 方法的 cmd参数  */
-#define F_DEV_CTRL_CFG     0x00     // 设备配置
-#define F_DEV_CTRL_CLR_INT 0x01
-#define F_DEV_CTRL_SET_INT 0x02
-#define F_DEV_CTRL_FLUSH   0x03     // 清空缓冲区
+#define DEV_CTRL_CFG     0x00     // 设备配置
+#define DEV_CTRL_CLR_INT 0x01
+#define DEV_CTRL_SET_INT 0x02
+#define DEV_CTRL_FLUSH   0x03     // 清空缓冲区
 
 /* 设备类型 */
 #define REG_COMMUNITY_DEV 0   // 通信类外设
@@ -60,24 +49,22 @@ typedef enum hw_trans_type
 /* 设备设备注册参数 */ 
 typedef enum
 {           
-    REG_UNUSED    = 0,              // 未使用
-    REG_DMA_TX    = 0x01 << 0,      // DMA发送
-    REG_DMA_RX    = 0x01 << 1,      // DMA接收
-    REG_IRQ_TX    = 0x01 << 2,      // 中断发送
-    REG_IRQ_RX    = 0x01 << 3,      // 中断接收
-    REG_STREAM    = 0x01 << 4,      // 流式
-    REG_TIMER     = 0x01 << 5,      // 定时器
-} regflag_e;
+    REG_PARAM_UNUSED    = 0,              // 未使用
+    REG_PARAM_DMA_TX    = 0x01 << 0,      // DMA发送
+    REG_PARAM_DMA_RX    = 0x01 << 1,      // DMA接收
+    REG_PARAM_INT_TX    = 0x01 << 2,      // 中断发送
+    REG_PARAM_INT_RX    = 0x01 << 3,      // 中断接收
+    REG_PARAM_TIMER     = 0x01 << 5,      // 定时器
+} regparam_e;
 
 /* 设备打开方式(open方法的参数) */
 typedef enum otype
 {
-    OTYPE_BLOCKING_RX       = 0x01 << 3,    // 阻塞式接收
-    OTYPE_BLOCKING_TX       = 0x01 << 4,    // 阻塞式发送
-    OTYPE_NON_BLOCKING_RX   = 0x01 << 5,    // 非阻塞式接收
-    OTYPE_NON_BLOCKING_TX   = 0x01 << 6,    // 非阻塞式发送
-    OTYPE_STREAM            = 0x01 << 7,    // 流式
-} otype_e;
+    OPARAM_BLOCKING_RX       = 0x01 << 3,    // 阻塞式接收
+    OPARAM_BLOCKING_TX       = 0x01 << 4,    // 阻塞式发送
+    OPARAM_NON_BLOCKING_RX   = 0x01 << 5,    // 非阻塞式接收
+    OPARAM_NON_BLOCKING_TX   = 0x01 << 6,    // 非阻塞式发送
+} oparam_e;
 
 /* 设备状态 */
 typedef enum dev_status {

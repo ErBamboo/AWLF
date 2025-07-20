@@ -99,7 +99,7 @@ static void _stm32_dma_cfg(stm32_serial_t handle, uint32_t dma_flag)
     DMA_InitTypeDef* DMA_InitStructure;
     NVIC_InitTypeDef NVIC_InitStructure;    
 
-    if(dma_flag == REG_DMA_TX)
+    if(dma_flag == REG_PARAM_DMA_TX)
     {
         dma_handle = handle->tx_dma;
         DMA_InitStructure = &dma_handle->cfg.init;
@@ -108,7 +108,7 @@ static void _stm32_dma_cfg(stm32_serial_t handle, uint32_t dma_flag)
         USART_DMACmd(handle->instance, USART_DMAReq_Tx, ENABLE);
         DMA_ITConfig(dma_handle->stream, DMA_IT_TC, ENABLE);
    }
-    else if(dma_flag == REG_DMA_RX)
+    else if(dma_flag == REG_PARAM_DMA_RX)
     {
         dma_handle = handle->rx_dma;
         DMA_InitStructure = &dma_handle->cfg.init;
@@ -145,7 +145,7 @@ static void _stm32_dma_cfg(stm32_serial_t handle, uint32_t dma_flag)
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     DMA_Init(dma_handle->stream, DMA_InitStructure);
     NVIC_Init(&NVIC_InitStructure);
-    if(dma_flag == REG_DMA_RX)
+    if(dma_flag == REG_PARAM_DMA_RX)
     {
         if(dma_handle->bufs[1].buf)
         {
@@ -159,6 +159,7 @@ static void _stm32_dma_cfg(stm32_serial_t handle, uint32_t dma_flag)
 static void _stm32_dma_transmit(stm32_serial_t handle, const uint8_t* buff, size_t size)
 {
     stm32_dma_t dma_handle = handle->tx_dma;
+    while(USART_GetFlagStatus(handle->instance, USART_FLAG_TXE) == RESET);  // 肥肠关键的一步，某个死人bug卡了我整整三天
     if(DMA_GetCmdStatus(dma_handle->stream) == ENABLE) return;
     DMA_InitTypeDef* DMA_InitStructure;
     DMA_InitStructure = &dma_handle->cfg.init;
@@ -266,40 +267,41 @@ static awlf_ret_t stm32_serial_control(hal_serial_t serial, uint32_t cmd, void* 
     handle = (stm32_serial_t)serial;
 
     switch (cmd) {
-        case F_DEV_CTRL_CFG:
+        case DEV_CTRL_CFG:
         {
             uint32_t _arg = (uint32_t)arg;
-            if(_arg & (REG_DMA_TX | REG_DMA_RX))
+            if(_arg & (REG_PARAM_DMA_TX | REG_PARAM_DMA_RX))
             {
                 _stm32_dma_cfg(handle, _arg);
                 // USART_ClearFlag(handle->instance, USART_FLAG_TC);         // 清除发送完成标志
                 // USART_ITConfig(handle->instance, USART_IT_TC, ENABLE);    // 发送完成中断使能   
             }
-            else if(_arg == REG_IRQ_RX)
+            else if(_arg == REG_PARAM_INT_RX)
             {
-                stm32_serial_control(serial, F_DEV_CTRL_SET_INT, (void*)_arg);   // 递归调用ctrl方法，开启发送中断
+                stm32_serial_control(serial, DEV_CTRL_SET_INT, (void*)_arg);   // 递归调用ctrl方法，开启发送中断
             }   
             USART_ITConfig(handle->instance, USART_IT_ERR, ENABLE);
+            USART_ITConfig(handle->instance, USART_IT_ORE_RX, ENABLE);
             /* 中断发送不需要使能 */
         }
         break;
 
-        case F_DEV_CTRL_SET_INT:
+        case DEV_CTRL_SET_INT:
         {
             uint32_t _arg = (uint32_t)arg;
-            if(_arg ==  REG_IRQ_TX)
+            if(_arg ==  REG_PARAM_INT_TX)
                 USART_ITConfig(handle->instance, USART_IT_TXE, ENABLE);
-            else if(_arg == REG_IRQ_RX)
+            else if(_arg == REG_PARAM_INT_RX)
                 USART_ITConfig(handle->instance, USART_IT_RXNE, ENABLE);
         }
         break;
 
-        case F_DEV_CTRL_CLR_INT:
+        case DEV_CTRL_CLR_INT:
         {
             uint32_t _arg = (uint32_t)arg;
-            if(_arg == REG_IRQ_TX)
+            if(_arg == REG_PARAM_INT_TX)
                 USART_ITConfig(handle->instance, USART_IT_TXE, DISABLE);
-            else if(_arg == REG_IRQ_RX)
+            else if(_arg == REG_PARAM_INT_RX)
                 USART_ITConfig(handle->instance, USART_IT_RXNE, DISABLE);
             USART_ITConfig(handle->instance, USART_IT_ERR, DISABLE);
         }
@@ -316,13 +318,13 @@ static size_t stm32_serial_transmit(hal_serial_t serial, const uint8_t* data, si
     if(!serial || !data || !length) return 0;
     handle = (stm32_serial_t)serial;
 
-    if(handle->cfg.regflags & REG_DMA_TX)
+    if(handle->cfg.regparams & REG_PARAM_DMA_TX)
     {
         _stm32_dma_transmit(handle, data, length);
     }
     else
     {
-        stm32_serial_control(serial, F_DEV_CTRL_SET_INT, (void*)REG_IRQ_TX);
+        stm32_serial_control(serial, DEV_CTRL_SET_INT, (void*)REG_PARAM_INT_TX);
     }
 
     return length;
@@ -425,22 +427,19 @@ void bsp_serial_init(void)
     for (uint8_t i = 0; i < sizeof(handler)/sizeof(handler[0]); i++)
     {
         handler[i].serial.interface = &serial_interface;
-        serial_register(&handler[i].serial, handler[i].cfg.name, NULL, handler[i].cfg.regflags);
-        _stm32_serial_init(&handler[i]);
+        serial_register(&handler[i].serial, handler[i].cfg.name, NULL, handler[i].cfg.regparams);
+         _stm32_serial_init(&handler[i]);
     }
 }
 
 static void _stm32_dma_tx_isr(stm32_serial_t handle);
 static void _stm32_rx_isr(stm32_serial_t handle, stm32_serial_rx_event event);
-
 #ifdef USE_SERIAL_1
 void USART1_IRQHandler(void)
 {
-    if(USART_GetITStatus(USART1, USART_IT_TXE) != RESET) {
-        USART_ClearITPendingBit(USART1, USART_IT_TXE);
-        serial_hw_isr(&handler[SERIAL1_IDX].serial, SERIAL_EVENT_INT_TXDONE, NULL, 0);
-    }
-    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET) {
+    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET &&         // 很奇怪的bug，STM32F407VET6当开启DMA接收，中断发送时理论上是不会触发RXNE的，但实际测试就是会触发
+    USART_GetFlagStatus(USART1, USART_FLAG_RXNE) != RESET)      // 现象是偶发性莫名其妙的多接收一个字节。目前不能确定其他系列是否也会这样，所以暂且加一个双重判断
+    {                                                               
         uint8_t data = USART_ReceiveData(USART1);
         USART_ClearITPendingBit(USART1, USART_IT_RXNE);
         serial_hw_isr(&handler[SERIAL1_IDX].serial, SERIAL_EVENT_INT_RXDONE, &data, 1);
@@ -449,9 +448,28 @@ void USART1_IRQHandler(void)
     {
         USART_ReceiveData(USART1);
         USART_ClearITPendingBit(USART1, USART_IT_IDLE);
-        if(handler[SERIAL1_IDX].cfg.regflags & REG_DMA_RX)
+        if(handler[SERIAL1_IDX].cfg.regparams & REG_PARAM_DMA_RX)
             _stm32_rx_isr(&handler[SERIAL1_IDX], IDLE);
     }
+    // 中断发送的实现包括了两部分，一部分在bsp层的control函数，作用是开启TXE，另一部分在中断服务函数，也就是以下部分，作用是数据发送与处理
+    if(USART_GetITStatus(USART1, USART_IT_TXE) != RESET) {
+        uint8_t data;
+        serial_fifo_t tx_fifo;
+        USART_ClearITPendingBit(USART1, USART_IT_TXE);
+        tx_fifo = serial_get_txfifo(&handler[SERIAL1_IDX].serial);
+        if(ringbuf_len(&tx_fifo->rb))
+        {
+            ringbuf_out_peek(&tx_fifo->rb, &data, 1);       // 此处只能用peek，不能使用out。rb读写指针的更新实在hal层的hw_isr中完成的，不能在底层更改
+            USART_SendData(USART1, data);
+            serial_hw_isr(&handler[SERIAL1_IDX].serial, SERIAL_EVENT_INT_TXDONE, NULL, 1);
+        }
+        else
+        {
+            USART_ITConfig(USART1, USART_IT_TXE, DISABLE);
+            serial_hw_isr(&handler[SERIAL1_IDX].serial, SERIAL_EVENT_INT_TXDONE, NULL, 0);  // 当数据全部发送完之后还需要通知一次应用层，否则应用层的回调会少触发一次。传入0以免误更新rb的out指针
+        }
+    }
+    
 }
 
 // 串口1发送DMA服务函数
@@ -535,8 +553,8 @@ static void _stm32_dma_tx_isr(stm32_serial_t handle)
     size_t tx_size;
     stm32_dma_t dma;
     dma = handle->tx_dma;
-    tx_size = dma->cfg.init.DMA_BufferSize - DMA_GetCurrDataCounter(dma->stream);   // 通常是0，保险起见算一下
-    serial_hw_isr(&handle->serial, SERIAL_EVENT_DMATXDONE, NULL, tx_size);
+    tx_size = dma->cfg.init.DMA_BufferSize - DMA_GetCurrDataCounter(dma->stream);
+    serial_hw_isr(&handle->serial, SERIAL_EVENT_DMA_TXDONE, NULL, tx_size);
 }
 
 static void _stm32_rx_isr(stm32_serial_t handle, stm32_serial_rx_event event)
@@ -561,5 +579,5 @@ static void _stm32_rx_isr(stm32_serial_t handle, stm32_serial_rx_event event)
     active_membuf = dma->bufs[now_buf_idx].buf;
     active_membuf = active_membuf + dma->bufs[now_buf_idx].last_counter;
     dma->bufs[now_buf_idx].last_counter = dma_rxcount;
-    serial_hw_isr(&handle->serial, SERIAL_EVENT_DMARXDONE, active_membuf, recv_size);
+    serial_hw_isr(&handle->serial, SERIAL_EVENT_DMA_RXDONE, active_membuf, recv_size);
 }

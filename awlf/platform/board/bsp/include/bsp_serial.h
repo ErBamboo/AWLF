@@ -7,8 +7,8 @@
 
 typedef struct stm32_serial_cfg
 {
-    char*      name;
-    regflag_e  regflags;
+    char*       name;
+    regparam_e  regparams;
     USART_InitTypeDef   init;
 } stm32_serial_cfg_s;
 

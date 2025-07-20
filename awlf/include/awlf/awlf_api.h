@@ -13,12 +13,13 @@
 /* 硬件中断控制 */
 #define awlf_hw_disable_irq() ({   \
     uint32_t primask = hw_get_primask();  \
-    hw_disable_irq(); \
+    if(!primask)        \
+        hw_set_primask(1); \
     primask;    \
 })
 #define awlf_hw_enable_irq(x) ({   \
-    hw_set_primask(x); \
-    hw_enable_irq(); \
+    if(!x)           \
+        hw_set_primask(0); \
 })
 
 /* 原子操作 */
@@ -55,7 +56,7 @@ do{ \
 }while(0)   
 
 /* compiler specific */
-#define __awlf_attribute(x)             __port_attribute((x))
+#define __awlf_attribute(x)             __port_attribute(x)
 #define __awlf_used                     __port_used
 #define __awlf_weak                     __port_weak
 #define __awlf_section(x)               __port_section(x)

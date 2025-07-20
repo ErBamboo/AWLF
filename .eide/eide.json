@@ -66,7 +66,8 @@
             }
           ]
         },
-        "options": "null"
+        "options": "null",
+        "archExtensions": ""
       },
       "uploader": "JLink",
       "uploadConfig": {
@@ -176,10 +177,11 @@
             "warnings": "unspecified",
             "C_FLAGS": "-Wno-empty-body",
             "language-c": "gnu11",
-            "language-cpp": "c++11"
+            "language-cpp": "c++11",
+            "misc-controls": "-gdwarf-2 -fno-inline-functions"
           },
           "asm-compiler": {
-            "$use": "asm"
+            "$use": "asm-auto"
           },
           "linker": {
             "output-format": "elf"
@@ -188,5 +190,5 @@
       }
     }
   },
-  "version": "3.5"
+  "version": "3.6"
 }
