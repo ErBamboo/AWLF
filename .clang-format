@@ -1,38 +1,40 @@
----
-BasedOnStyle: Microsoft
-Language: Cpp
+BasedOnStyle: LLVM  # 继承LLVM的格式
+Language: C # C语言
 
 ###################################
-#          indent conf
+#             排版
 ###################################
 
-UseTab: Never
-IndentWidth: 4
-TabWidth: 4
-ColumnLimit: 0
-AccessModifierOffset: -4
-NamespaceIndentation: All
-FixNamespaceComments: false
-BreakBeforeBraces: Linux
+UseTab: Never                           # 不使用tab（每个tab用n个空格表示）
+IndentWidth: 4                          # 缩进宽度为4个空格
+TabWidth: 4                             # tab宽度为4个空格
+BreakBeforeBraces: Allman               # 所有左大括号前换行
+IndentExternBlock: NoIndent             # 防止头文件整体缩进
+SortIncludes: false                     # 不排序#include
+
+NamespaceIndentation: None              # C语言不需要这个，建议设为 None 或删除
+
+AccessModifierOffset: -4                # C语言不需要这个，访问修饰符偏移
+FixNamespaceComments: false             # C语言不需要这个，忽略命名空间注释
+BreakBeforeTernaryOperators: false      # C语言不需要这个，三目运算符前换行
 
 ###################################
-#          other styles
+#        对齐与美化
 ###################################
+ColumnLimit: 130
+AlignConsecutiveMacros: AcrossEmptyLines  # 宏定义对齐
+AlignConsecutiveAssignments: Consecutive  # 赋值对齐
+AlignConsecutiveDeclarations: true        # 对齐连续的声明
 
-# 
-# for more conf, you can ref: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
-#
+PointerAlignment: Left                    # 设置指针靠左
+IndentPPDirectives: BeforeHash            # 预处理指令前缩进
+AlignTrailingComments: true               # 对齐尾部注释（保持注释对齐）
 
-AllowShortIfStatementsOnASingleLine: true
+###################################
+#       例外规则
+###################################
+AllowShortBlocksOnASingleLine: true       # 允许{}短放在一行
+AllowShortFunctionsOnASingleLine: None    # 防止短函数被放在一行
+IndentCaseLabels: true                    # 允许case缩进
+AllowShortCaseLabelsOnASingleLine: true   # 允许case语句短放在一行
 
-AllowShortLoopsOnASingleLine: true
-
-AllowShortBlocksOnASingleLine: true
-
-IndentCaseLabels: true
-
-SortIncludes: false
-
-AlignConsecutiveMacros: AcrossEmptyLines
-
-AlignConsecutiveAssignments: Consecutive

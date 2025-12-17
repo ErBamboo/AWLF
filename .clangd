@@ -1,0 +1,13 @@
+CompileFlags:
+  # 这里移除可能冲突的 flag
+  Remove: []
+
+  # 这里添加编译参数
+  Add: []
+
+Diagnostics:
+  # 抑制所有“未使用的头文件”警告
+  Suppress: [unused-includes]
+  
+  ClangTidy:
+    Remove: [misc-include-cleaner]

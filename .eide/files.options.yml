@@ -13,8 +13,10 @@
 #   '!Application/*.c':   -O0
 #   '**/*.c':             -O2 -gnu ...
 
-version: "2.0"
+version: "2.1"
 options:
-    Debug:
+    NewFrame_2:
         files: {}
-        virtualPathFiles: {}
+        virtualPathFiles:
+            <virtual_root>/TEST/SERIAL_TEST_CRC/main.c: ""
+            <virtual_root>/TEST/GM6020_TEST/main.c: ""

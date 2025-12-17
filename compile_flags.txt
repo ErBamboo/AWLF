@@ -1,0 +1,24 @@
+--driver-mode=gcc
+
+-xc
+
+--target=arm-arm-none-eabi
+
+-mcpu=cortex-m4
+-mfloat-abi=hard
+-mfpu=fpv4-sp-d16
+
+-D__TARGET_FPU_VFP
+-DSTM32F407xx
+-D__ARMCC_VERSION
+
+-I./awlf/third_party/board/libraries/CMSIS/Include
+-I./awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Inc
+-I./awlf/third_party/FreeRTOS/include
+-I./awlf/third_party/FreeRTOS/portable
+-I./awlf/third_party/board/libraries/CMSIS/Include/CORE
+-I./awlf/third_party/board/libraries/CMSIS/Include/ST
+-I./awlf/third_party/board/BSP/include
+-I./awlf/lib
+
+-isystemD:/Program Files/ProgramTools/Keil_v5/ARM/ARMCLANG/include

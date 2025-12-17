@@ -1,0 +1,112 @@
+version: "4.1"
+name: NewFrame_2
+type: ARM
+deviceName: STM32F407IGHx
+packDir: .pack/Keil/STM32F4xx_DFP.2.13.0
+srcDirs:
+  - awlf
+  - Project
+  - test
+virtualFolder:
+  name: <virtual_root>
+  files:
+    - path: .clang-format
+    - path: .gitignore
+    - path: Makefile
+    - path: compile_flags.txt
+    - path: .clangd
+  folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 0b85ebc905fe4554e0d3092fd7dffc69
+targets:
+  Debug:
+    cppPreprocessAttrs:
+      defineList:
+        - __TARGET_FPU_VFP
+        - STM32F407xx
+      incList:
+        - .
+        - awlf/third_party/board/BSP/include
+        - awlf/third_party/board/libraries/CMSIS/Include
+        - awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Inc
+        - awlf/third_party/FreeRTOS/include
+        - awlf/third_party/FreeRTOS/portable
+        - awlf/third_party/board/libraries/CMSIS/Include/CORE
+        - awlf/third_party/board/libraries/CMSIS/Include/ST
+        - awlf/lib
+      libList: []
+    excludeList:
+      - libraries/CMSIS/arm_math
+      - data_struct/output
+      - libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c
+      - awlf/test/hal_serial_test_crc/main.c
+      - awlf/test/serial_test_crc/main.c
+      - awlf/awlib/source/driver/modules/motor/motor_driver.c
+      - test/serial_test_crc/main.c
+      - test/can_test/main.c
+    toolchain: AC6
+    toolchainConfigMap:
+      AC6:
+        archExtensions: ""
+        cpuType: Cortex-M4
+        floatingPointHardware: single
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler:
+            $use: asm-auto
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            C_FLAGS: -Wno-empty-body
+            c99-mode: true
+            gnu-extensions: true
+            language-c: gnu11
+            language-cpp: c++11
+            misc-controls: -gdwarf-2 -fno-inline-functions
+            one-elf-section-per-function: true
+            optimization: level-0
+            warnings: unspecified
+          global:
+            output-debug-info: enable
+            use-microLIB: true
+          linker:
+            output-format: elf
+        scatterFilePath: Project\engineering.sct
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x20000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x10000"
+                startAddr: "0x10000000"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x100000"
+                startAddr: "0x8000000"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: build\Debug\NewFrame_2.hex
+        cpuInfo:
+          cpuName: STM32F407IG
+          vendor: ST
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+    uploader: JLink

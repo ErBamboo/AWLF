@@ -1,0 +1,11 @@
+当涉及到接口设计时，你需要遵循以下规则 start
+1. 保持硬件无关性：通过抽象层，将硬件细节隐藏起来，只提供统一的接口。这样，当硬件发生变化时，框架只需要更新抽象层，而不需要修改应用层代码。
+2. 编写硬件抽象层时，既要考虑接口的易用性，又要考虑硬件的兼容性，接口设计遵循最小必要原则，尽量避免引入 unnecessary complexity。
+当涉及到接口设计时，你需要遵循以下规则 end
+
+当问题与CAN框架相关时你需要阅读的规则 start
+1. 详细阅读CanUserMsg_s结构体。
+2. hal_can.c和hal_canfd.c中存放各自特定的实现，hal_can_core.c中存放和CAN类型无关的实现。
+3. CAN和CANFD的CanRxFifo_s在申请msgBuffer时，是分别按照CanMsgContainer_s和CanFdMsgContainer_s申请的，由于CanMsgWrapper_s中存在一个柔性数组data，那么在can_core中就只需要通过CanMsgList_s中的CanMsgWrapper_s中的data字段即可访问CanMsgContainer_s或者CanFdMsgContainer_s中的container字段（container字段是真正存放数据的地方），相当于CanMsgWrapper_s封装了CAN或CANFD报文容器，将容器的内存映射到了CanMsgWrapper_s中的data字段。
+4. 在CAN设备接收一帧数据时，CAN设备会调用_canrx_msg_add函数将接收到的CAN或CANFD报文添加到接收队列和滤波器队列中。
+当问题与CAN框架相关时你需要阅读的规则 end
