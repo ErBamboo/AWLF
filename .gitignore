@@ -1,19 +1,15 @@
-# vscode
-.vscode/
-*.code-workspace
-
-# trae
-.trae/
+# dot files
+/.vscode/launch.json
+/.settings
+/.eide/log
+/.eide.usr.ctx.json
 
 # project out
-build/
-DebugConfig/
+/build
+/bin
+/obj
+/out
 
-# Keil
-*.uvprojx
-*.uvoptx
-*.scvd
-
-# eide
-.eide/
-
+# eide template
+*.ept
+*.eide-template

@@ -6,8 +6,8 @@ extern "C"
 {
 #endif
 
-#include "data_struct/corelist.h"
 #include "component/driver/core/device.h"
+#include "data_struct/corelist.h"
 #include "FreeRTOS.h" // TODO: 引入posix兼容层
 #include "timers.h"
 

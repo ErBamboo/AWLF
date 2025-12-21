@@ -6,7 +6,6 @@ packDir: .pack/Keil/STM32F4xx_DFP.2.13.0
 srcDirs:
   - awlf
   - Project
-  - test
 virtualFolder:
   name: <virtual_root>
   files:
@@ -42,10 +41,11 @@ targets:
       - data_struct/output
       - libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_fsmc.c
       - awlf/test/hal_serial_test_crc/main.c
-      - awlf/test/serial_test_crc/main.c
       - awlf/awlib/source/driver/modules/motor/motor_driver.c
       - test/serial_test_crc/main.c
       - test/can_test/main.c
+      - awlf/test/can_test/main.c
+      - awlf/test/serial_test_crc/main.c
     toolchain: AC6
     toolchainConfigMap:
       AC6:
@@ -64,6 +64,7 @@ targets:
             gnu-extensions: true
             language-c: gnu11
             language-cpp: c++11
+            link-time-optimization: true
             misc-controls: -gdwarf-2 -fno-inline-functions
             one-elf-section-per-function: true
             optimization: level-0

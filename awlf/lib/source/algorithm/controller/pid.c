@@ -222,12 +222,6 @@ static bool pid_dead_band_process(PidController_t pid)
 {
     if (fabsf(pid->err) < pid->improvementParams.deadBand)
     {
-        pid->out      = 0.0f;
-        pid->prevOut  = 0.0f;
-        pid->pOut     = 0.0f;
-        pid->iOut     = 0.0f;
-        pid->dOut     = 0.0f;
-        pid->prevDOut = 0.0f;
         return true; // 在死区内
     }
     return false; // 不在死区内
@@ -308,10 +302,10 @@ static void pid_output_limit_process(PidController_t pid)
             pid->iTerm = 0.0f;
         }
     }
-    else if (pid->out < -pid->improvementParams.outputLimitMin)
+    else if (pid->out < pid->improvementParams.outputLimitMin)
     {
         // 输出达到下限
-        pid->out = -pid->improvementParams.outputLimitMin;
+        pid->out = pid->improvementParams.outputLimitMin;
 
         // 抗积分饱和：只有当误差为负（需要继续减少输出）时，才停止积分累积
         if (pid->err < 0.0f)
@@ -336,7 +330,7 @@ static float pid_positional_compute(PidController_t pid)
     {
         if (pid_dead_band_process(pid))
         {
-            return 0.0f;
+            error = 0.0;
         }
     }
 
@@ -414,6 +408,14 @@ static float pid_positional_compute(PidController_t pid)
  */
 static float pid_incremental_compute(PidController_t pid)
 {
+    if (pid->improvementConfig.settings.deadBandEnable && pid_dead_band_process(pid))
+    {
+        pid->pOut = 0.0f;
+        pid->iOut = 0.0f;
+        pid->dOut = 0.0f;
+        return pid->prevOut; 
+    }
+
     float error = pid->err;
 
     // 计算比例项
