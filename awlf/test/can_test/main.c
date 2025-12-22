@@ -1,5 +1,5 @@
-#include "component/driver/pal_dev/pal_dev.h"
-#include "core/awlf_cpu.h"
+#include "component/driver/pal/pal_dev.h"
+#include "aw_core/awlf_cpu.h"
 #include "FreeRTOS.h" // TODO: 引入posix兼容层
 #include "task.h"
 

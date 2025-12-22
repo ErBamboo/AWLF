@@ -1,5 +1,5 @@
-#include "core/awlf_cpu.h"
-#include "core/awlf_def.h"
+#include "aw_core/awlf_cpu.h"
+#include "aw_core/awlf_def.h"
 
 #include "gm6020.h"
 #include "FreeRTOS.h" // TODO: 引入posix兼容层
@@ -21,7 +21,7 @@ static void can_filter_callback(Device_t dev, void* param, size_t filterBank, si
     gm6020_update(gm6020);
 }
 
-__dbg_param_def(float, speed) = 200.0f;
+__dbg_param_def(float, speed) = 50.0f;
 __dbg_param_def(float, angle) = 180.0f;
 __dbg_param_def(float, dbgSpeedFbCoef) = 0.2f;
 __dbg_param_def(float, dbgAccFbCoef) = 0.003f;
@@ -53,16 +53,17 @@ void GM6020_task(void* param)
     float accFb = 0.0f;
     while (1)
     {
-        xTimeIncrement = xTaskGetTickCount();
-        t = xTimeIncrement / 1000.0f;
+        // xTimeIncrement = xTaskGetTickCount();
+        // t = xTimeIncrement / 1000.0f;
 
-        setAngle = angle * sinf(2.0f * 3.1415f * t);
-        speedFb = angle * cosf(2.0f * 3.1415f * (t + 1));
-        accFb = angle * -sinf(2.0f * 3.1415f * (t + 1));
+        // setAngle = angle * sinf(2.0f * 3.1415f * t);
+        // speedFb = angle * cosf(2.0f * 3.1415f * (t + 1));
+        // accFb = angle * -sinf(2.0f * 3.1415f * (t + 1));
 
-        gm6020_set_acc_feedback(&GM6020, accFb, dbgAccFbCoef);
-        gm6020_set_speed_feedback(&GM6020, speedFb, dbgSpeedFbCoef);
-        gm6020_set_single_angle(&GM6020, setAngle);
+        // gm6020_set_acc_feedback(&GM6020, accFb, dbgAccFbCoef);
+        // gm6020_set_speed_feedback(&GM6020, speedFb, dbgSpeedFbCoef);
+        // gm6020_set_single_angle(&GM6020, setAngle);
+        gm6020_set_speed(&GM6020,  speed);
         vTaskDelayUntil(&xTimeIncrement, pdMS_TO_TICKS(1));
     }
 }

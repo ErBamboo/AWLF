@@ -27,14 +27,14 @@ targets:
         - STM32F407xx
       incList:
         - .
-        - awlf/third_party/board/BSP/include
-        - awlf/third_party/board/libraries/CMSIS/Include
-        - awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Inc
+        - awlf/third_party/BSP/include
+        - awlf/third_party/bsp/libraries/CMSIS/Include
         - awlf/third_party/FreeRTOS/include
         - awlf/third_party/FreeRTOS/portable
-        - awlf/third_party/board/libraries/CMSIS/Include/CORE
-        - awlf/third_party/board/libraries/CMSIS/Include/ST
+        - awlf/third_party/bsp/libraries/CMSIS/Include/CORE
+        - awlf/third_party/bsp/libraries/CMSIS/Include/ST
         - awlf/lib
+        - awlf/third_party/BSP/libraries/STM32F4xx_HAL_Driver/Inc
       libList: []
     excludeList:
       - libraries/CMSIS/arm_math

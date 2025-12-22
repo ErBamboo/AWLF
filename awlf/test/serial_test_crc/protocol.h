@@ -5,7 +5,7 @@
 #ifndef TEST_PROTOCOL_H
 #define TEST_PROTOCOL_H
 
-#include "core/awlf_def.h"
+#include "aw_core/awlf_def.h"
 #include "data_struct/ringbuffer.h"
 #include "component/driver/core/device.h"
 

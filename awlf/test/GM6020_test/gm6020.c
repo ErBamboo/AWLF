@@ -1,6 +1,6 @@
 #include "gm6020.h"
 #include "algorithm/controller/pid.h"
-#include "core/awlf_def.h"
+#include "aw_core/awlf_def.h"
 #include <math.h>
 
 int16_t speedOut;

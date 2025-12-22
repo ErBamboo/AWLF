@@ -2,7 +2,7 @@
 #define __GM6020_H__
 
 #include "algorithm/controller/pid.h"
-#include "component/driver/pal_dev/pal_can_dev.h"
+#include "component/driver/pal/pal_can_dev.h"
 #include <math.h>
 
 #define GM6020_SEND_ID       (0x1FFU) // 发送标识符，当前表示电压发送

@@ -13,8 +13,8 @@
 #define __AWLF_DEVICE_H__
 
 #include "data_struct/corelist.h"
-#include "core/awlf_def.h"
-#include "core/awlf_atomic.h"
+#include "aw_core/awlf_def.h"
+#include "aw_core/awlf_atomic.h"
 
 typedef struct DevInterface* DevInterface_t;
 typedef struct Device*       Device_t;

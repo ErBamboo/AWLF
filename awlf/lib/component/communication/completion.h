@@ -5,7 +5,7 @@
 #include "FreeRTOS.h" // TODO: 引入posix兼容层
 #include "task.h"
 /*** awlf ***/
-#include "core/awlf_def.h"
+#include "aw_core/awlf_def.h"
 
 /**** 注意！每个完成量对象能且仅能被一个线程等待！！相对应的功能请使用其他ITC对象！！！ */
 

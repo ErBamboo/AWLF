@@ -8,29 +8,6 @@
  *
  */
 
-/*
-    1. 使用示例 —— 基本pid运算
-    #include "pid.h"
-    PidController_s pid = {0};
-    pid_init(&pid, 0.1f, 0.01f, 0.1f, PID_POSITIONAL_MODE);
-    pidtime_s currentTick = awlf_cpu_get_time_s();  // 获取当前系统时间，单位秒，注意类型转换
-    float output = pid_compute(pid, 100.0f, 50.0f, currentTick);
-
-    2. 使用示例2 —— 优化功能使用
-    #include "pid.h"
-    PidController_s pid = {0};
-    pid_init(&pid, 0.1f, 0.01f, 0.1f, PID_POSITIONAL_MODE);
-
-    pid_set_output_limit(&pid, 100.0f);
-    pid_set_integral_limit(&pid, 100.0f);                       // 积分限幅
-    pid_set_dead_band(&pid, 1.0f);                              // 使能死区控制
-    pid_set_variable_integral_thresholds(&pid, 20.0f, 200.0f);  // 设置变速积分阈值
-
-    pidtime_s currentTick = awlf_cpu_get_time_s();  // 获取当前系统时间，单位秒，注意类型转换
-    float output = pid_compute(&pid, 100.0f, 50.0f, currentTick);
-
-*/
-
 #ifndef __AWLF_PID_H__
 #define __AWLF_PID_H__
 

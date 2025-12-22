@@ -385,7 +385,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -397,7 +397,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -409,7 +409,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_adc_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -421,7 +421,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_can.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -433,7 +433,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cec.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cec.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_cec.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -445,7 +445,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_cortex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -457,7 +457,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_crc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -469,7 +469,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cryp.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cryp.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_cryp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -481,7 +481,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cryp_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cryp_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_cryp_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -493,7 +493,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dac.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -505,7 +505,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dac_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -517,7 +517,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dcmi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -529,7 +529,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dcmi_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dcmi_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -541,7 +541,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dfsdm.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dfsdm.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dfsdm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -553,7 +553,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dma.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -565,7 +565,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma2d.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dma2d.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -577,7 +577,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dma_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -589,7 +589,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dsi.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_dsi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -601,7 +601,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_eth.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -613,7 +613,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_exti.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -625,7 +625,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_flash.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -637,7 +637,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_flash_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -649,7 +649,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_flash_ramfunc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -661,7 +661,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpi2c.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpi2c.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_fmpi2c.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -673,7 +673,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpi2c_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpi2c_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_fmpi2c_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -685,7 +685,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpsmbus.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpsmbus.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_fmpsmbus.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -697,7 +697,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpsmbus_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fmpsmbus_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_fmpsmbus_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -709,7 +709,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -721,7 +721,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hash.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hash.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_hash.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -733,7 +733,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hash_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hash_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_hash_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -745,7 +745,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_hcd.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_hcd.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -757,7 +757,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_i2c.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -769,7 +769,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_i2c_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -781,7 +781,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_i2s.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -793,7 +793,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_i2s_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -805,7 +805,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_irda.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_irda.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_irda.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -817,7 +817,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_iwdg.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_iwdg.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_iwdg.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -829,7 +829,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_lptim.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_lptim.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_lptim.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -841,7 +841,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_ltdc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -853,7 +853,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_ltdc_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -865,7 +865,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_mmc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_mmc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_mmc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -877,7 +877,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_msp_template.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -889,7 +889,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nand.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nand.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_nand.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -901,7 +901,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nor.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_nor.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_nor.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -913,7 +913,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pccard.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pccard.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_pccard.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -925,7 +925,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_pcd.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -937,7 +937,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_pcd_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -949,7 +949,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_pwr.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -961,7 +961,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_pwr_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -973,7 +973,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_qspi.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_qspi.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_qspi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -985,7 +985,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_rcc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -997,7 +997,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_rcc_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1009,7 +1009,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_rng.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1021,7 +1021,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_rtc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1033,7 +1033,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_rtc_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1045,7 +1045,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sai.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sai.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_sai.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1057,7 +1057,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sai_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sai_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_sai_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1069,7 +1069,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_sd.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1081,7 +1081,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sdram.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_sdram.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1093,7 +1093,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_smartcard.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_smartcard.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_smartcard.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1105,7 +1105,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_smbus.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_smbus.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_smbus.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1117,7 +1117,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spdifrx.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spdifrx.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_spdifrx.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1129,7 +1129,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_spi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1141,7 +1141,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_sram.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1153,7 +1153,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_tim.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1165,7 +1165,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_tim_ex.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1177,7 +1177,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1189,7 +1189,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_usart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1201,7 +1201,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_wwdg.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1213,7 +1213,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1225,7 +1225,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_crc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_crc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_crc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1237,7 +1237,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dac.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_dac.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1249,7 +1249,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_dma.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1261,7 +1261,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma2d.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma2d.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_dma2d.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1273,7 +1273,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_exti.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1285,7 +1285,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_fmc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1297,7 +1297,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmpi2c.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fmpi2c.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_fmpi2c.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1309,7 +1309,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_fsmc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1321,7 +1321,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1333,7 +1333,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_i2c.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_i2c.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_i2c.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1345,7 +1345,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_lptim.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_lptim.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_lptim.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1357,7 +1357,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_pwr.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_pwr.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_pwr.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1369,7 +1369,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_rcc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1381,7 +1381,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rng.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rng.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_rng.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1393,7 +1393,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rtc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rtc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_rtc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1405,7 +1405,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_sdmmc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1417,7 +1417,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_spi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1429,7 +1429,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_tim.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1441,7 +1441,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_usart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1453,7 +1453,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_usb.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1465,7 +1465,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_ll_utils.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1485,7 +1485,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/CMSIS/source/ST/startup_stm32f407xx.s</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/CMSIS/source/ST/startup_stm32f407xx.s</PathWithFileName>
       <FilenameWithoutPath>startup_stm32f407xx.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1497,7 +1497,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/CMSIS/source/ST/stm32f4xx_it.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/CMSIS/source/ST/stm32f4xx_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_it.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1509,7 +1509,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/libraries/CMSIS/source/ST/system_stm32f4xx.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/libraries/CMSIS/source/ST/system_stm32f4xx.c</PathWithFileName>
       <FilenameWithoutPath>system_stm32f4xx.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1517,7 +1517,7 @@
   </Group>
 
   <Group>
-    <GroupName>AWLF/THIRD_PARTY/BOARD/BSP/SERIAL</GroupName>
+    <GroupName>AWLF/THIRD_PARTY/BOARD/bsp/SERIAL</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -1529,7 +1529,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/BSP/serial/bsp_serial_impl.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/serial/bsp_serial_impl.c</PathWithFileName>
       <FilenameWithoutPath>bsp_serial_impl.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1541,7 +1541,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/BSP/serial/bsp_serial_init.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/serial/bsp_serial_init.c</PathWithFileName>
       <FilenameWithoutPath>bsp_serial_init.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1553,7 +1553,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/BSP/serial/serial_it.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/serial/serial_it.c</PathWithFileName>
       <FilenameWithoutPath>serial_it.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1561,7 +1561,7 @@
   </Group>
 
   <Group>
-    <GroupName>AWLF/THIRD_PARTY/BOARD/BSP/CORE</GroupName>
+    <GroupName>AWLF/THIRD_PARTY/BOARD/bsp/CORE</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -1573,7 +1573,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/BSP/core/bsp_cpu.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/core/bsp_cpu.c</PathWithFileName>
       <FilenameWithoutPath>bsp_cpu.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1585,7 +1585,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/BSP/core/bsp_dwt.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/core/bsp_dwt.c</PathWithFileName>
       <FilenameWithoutPath>bsp_dwt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1593,7 +1593,7 @@
   </Group>
 
   <Group>
-    <GroupName>AWLF/THIRD_PARTY/BOARD/BSP/CAN</GroupName>
+    <GroupName>AWLF/THIRD_PARTY/BOARD/bsp/CAN</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -1605,7 +1605,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/BSP/can/bsp_can_impl.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/can/bsp_can_impl.c</PathWithFileName>
       <FilenameWithoutPath>bsp_can_impl.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1617,7 +1617,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/third_party/board/BSP/can/bsp_can_it.c</PathWithFileName>
+      <PathWithFileName>awlf/third_party/bsp/can/bsp_can_it.c</PathWithFileName>
       <FilenameWithoutPath>bsp_can_it.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1657,7 +1657,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/lib/source/driver/pal_dev/serial/hal_serial.c</PathWithFileName>
+      <PathWithFileName>awlf/lib/source/driver/pal/serial/hal_serial.c</PathWithFileName>
       <FilenameWithoutPath>hal_serial.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1677,7 +1677,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/lib/source/driver/pal_dev/can/hal_can.c</PathWithFileName>
+      <PathWithFileName>awlf/lib/source/driver/pal/can/hal_can.c</PathWithFileName>
       <FilenameWithoutPath>hal_can.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1689,7 +1689,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/lib/source/driver/pal_dev/can/hal_canfd.c</PathWithFileName>
+      <PathWithFileName>awlf/lib/source/driver/pal/can/hal_canfd.c</PathWithFileName>
       <FilenameWithoutPath>hal_canfd.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1701,7 +1701,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/lib/source/driver/pal_dev/can/hal_can_core.c</PathWithFileName>
+      <PathWithFileName>awlf/lib/source/driver/pal/can/hal_can_core.c</PathWithFileName>
       <FilenameWithoutPath>hal_can_core.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1741,7 +1741,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/lib/source/driver/core/awlf_device.c</PathWithFileName>
+      <PathWithFileName>awlf/lib/source/driver/aw_core/awlf_device.c</PathWithFileName>
       <FilenameWithoutPath>awlf_device.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1793,7 +1793,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>awlf/lib/source/core/awlf_cpu.c</PathWithFileName>
+      <PathWithFileName>awlf/lib/source/aw_core/awlf_cpu.c</PathWithFileName>
       <FilenameWithoutPath>awlf_cpu.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
