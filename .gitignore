@@ -1,0 +1,27 @@
+# dot files
+/.settings
+/.eide/log
+/.eide.usr.ctx.json
+
+# vscode (keep launch.json)
+/.vscode/*
+!/.vscode/launch.json
+
+# cache
+/.cache/
+
+# xmake
+/.xmake/
+
+# compilation database
+/compile_commands.json
+
+# project out
+/build
+/bin
+/obj
+/out
+
+# eide template
+*.ept
+*.eide-template

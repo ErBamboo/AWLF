@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "J-Link | STM32F407IG",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "jlink",
+      "device": "STM32F407IG",
+      "interface": "swd",
+      "cwd": "${workspaceFolder}",
+      "executable": "build/cross/arm/debug/robot_project",
+      "runToEntryPoint": "main",
+      "svdFile": "${workspaceFolder}/awlf/platform/bsp/vendor/STM32/STM32F4/SVD/STM32F407.svd",
+      "serverpath": "D:/Program Files/ProgramTools/SEGGER/Jlink/JLinkGDBServerCL.exe",
+      "armToolchainPath": "D:/Program Files/ProgramTools/gcc-arm-none-eabi-10.3-2021.10/bin",
+      "postLaunchCommands": [
+        "monitor reset",
+        "load"
+      ]
+    }
+  ]
+}

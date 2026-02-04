@@ -1,0 +1,3 @@
+[submodule "awlf"]
+	path = awlf
+	url = https://github.com/ErBamboo/awakening_robot_embedded_framework.git
