@@ -1,20 +1,8 @@
 # dot files
+/.vscode/launch.json
 /.settings
 /.eide/log
 /.eide.usr.ctx.json
-
-# vscode (keep launch.json)
-/.vscode/*
-!/.vscode/launch.json
-
-# cache
-/.cache/
-
-# xmake
-/.xmake/
-
-# compilation database
-/compile_commands.json
 
 # project out
 /build

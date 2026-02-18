@@ -2,21 +2,44 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "J-Link | STM32F407IG",
+      "name": "J-Link | STM32F407IG | gcc",
       "type": "cortex-debug",
       "request": "launch",
       "servertype": "jlink",
       "device": "STM32F407IG",
       "interface": "swd",
       "cwd": "${workspaceFolder}",
-      "executable": "build/cross/arm/debug/robot_project",
+      "executable": "build/cross/arm/debug/robot_project.elf",
       "runToEntryPoint": "main",
       "svdFile": "${workspaceFolder}/awlf/platform/bsp/vendor/STM32/STM32F4/SVD/STM32F407.svd",
       "serverpath": "D:/Program Files/ProgramTools/SEGGER/Jlink/JLinkGDBServerCL.exe",
       "armToolchainPath": "D:/Program Files/ProgramTools/gcc-arm-none-eabi-10.3-2021.10/bin",
-      "postLaunchCommands": [
+      "preLaunchCommands": [
+        "monitor reset halt"
+      ]
+    },
+    {
+      "name": "J-Link | STM32F407IG | armclang",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "jlink",
+      "device": "STM32F407IG",
+      "interface": "swd",
+      "cwd": "${workspaceFolder}",
+      "executable": "build/cross/cortex-m4/debug/robot_project.elf",
+      "runToEntryPoint": "main",
+      "svdFile": "${workspaceFolder}/awlf/platform/bsp/vendor/STM32/STM32F4/SVD/STM32F407.svd",
+      "serverpath": "D:/Program Files/ProgramTools/SEGGER/Jlink/JLinkGDBServerCL.exe",
+      "armToolchainPath": "D:/Program Files/ProgramTools/gcc-arm-none-eabi-10.3-2021.10/bin",
+      "overrideLaunchCommands": [
         "monitor reset",
-        "load"
+        "restore build/cross/cortex-m4/debug/robot_project.hex",
+        "monitor reset"
+      ],
+      "preLaunchCommands": [
+        "monitor semihosting enable",
+        "monitor semihosting breakonerror 0",
+        "set mem inaccessible-by-default off",
       ]
     }
   ]
