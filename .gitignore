@@ -9,6 +9,7 @@
 /bin
 /obj
 /out
+/.worktrees
 
 # eide template
 *.ept

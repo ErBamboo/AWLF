@@ -1,6 +1,6 @@
 ﻿# Repository Guidelines
 
-本文件用于定义 AI 与维护者在 AWLF 仓库内的行为规范与工作流边界。内容仅包含行为与流程，不重复技术细节。
+本文件用于定义 AI 与维护者在 OM 根仓内的行为规范与工作流边界。内容仅包含行为与流程，不重复技术细节。
 
 其上级规范为C:\Users\Administrator\.codex\AGENTS.md，同样需要你参阅
 
@@ -26,13 +26,13 @@
 
 ## 5. 文档一致性要求
 - 构建体系相关文档以以下为准：
-  - `awlf/document/build/reference_manual.md`
-  - `awlf/document/build/maintenance_manual.md`
+  - `oh-my-robot/docs/quick_start.md`
+  - `oh-my-robot/docs/build/maintenance_manual.md`
 - 构建流程变更必须同步更新上述两份文档。
 - 新增构建文档时需在上述两份手册中建立索引或链接。
 
 ## 6. 变更记录与维护
-- 重要流程变更需追加 `awlf/document/build/maintenance_manual.md` 的“变更记录”小节。
+- 重要流程变更需追加 `oh-my-robot/docs/build/maintenance_manual.md` 的“变更记录”小节。
 - 历史/过程类文档仅作为归档参考，不作为现行标准。
 
 ## 7. 编码与格式

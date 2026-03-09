@@ -1,3 +1,4 @@
-[submodule "awlf"]
-	path = awlf
-	url = https://github.com/ErBamboo/awakening_robot_embedded_framework.git
+[submodule "oh-my-robot"]
+	path = oh-my-robot
+	url = https://github.com/oh-my-robot/oh-my-robot-framework.git
+	branch = integration
