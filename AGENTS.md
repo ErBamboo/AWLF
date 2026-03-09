@@ -38,3 +38,13 @@
 ## 7. 编码与格式
 - 文档统一使用 UTF-8 编码。请使用UTF-8格式打开，UTF-8格式保存。
 - 中文为主，术语保持一致（host/build profile）。
+
+## 8. 并行开发（KISS）
+- `main` 是 root 仓库唯一共享基线；并行任务统一从 `main` 切出，不长期保留专用同步 worktree。
+- worktree 根目录固定为 `.worktrees/`，并保持忽略；完成任务后应及时删除对应 worktree。
+- 一个任务只对应一套标识：一个 root 分支、一个 root worktree、一个同名的 `oh-my-robot` 子模块分支。
+- root 分支命名遵循 `feature/<issue>-<slug>`、`fix/<issue>-<slug>`、`hotfix/<issue>-<slug>`；worktree 目录使用去斜杠形式，例如 `.worktrees/feature-123-osal-mutex/`。
+- 创建任务 worktree 时，先从 `main` 切出 root 分支，再在 `oh-my-robot` 中从 `upstream/integration` 切出同名子模块分支；禁止为子模块再单独创建第二层 worktree。
+- `oh-my-robot` 子模块远端拓扑固定为：`origin` 指向个人 Fork，`upstream` 指向官方仓库 `oh-my-robot/oh-my-robot-framework`。
+- root 分支提交前应 rebase 到 `origin/main`；子模块分支提交前应 rebase 到 `upstream/integration`；统一禁止用 `merge` 同步上游。
+- `robot/main` 只允许记录官方 `upstream/integration` 已可达的子模块提交，不得指向仅存在于个人 Fork 的临时提交。

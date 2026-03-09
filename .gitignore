@@ -12,6 +12,7 @@
 /.worktrees
 /.codex/**/__pycache__/
 /.codex/**/*.pyc
+/.xmake/
 
 # eide template
 *.ept
