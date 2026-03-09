@@ -10,6 +10,8 @@
 /obj
 /out
 /.worktrees
+/.codex/**/__pycache__/
+/.codex/**/*.pyc
 
 # eide template
 *.ept
