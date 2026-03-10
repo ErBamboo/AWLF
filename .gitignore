@@ -9,7 +9,6 @@
 /bin
 /obj
 /out
-/.worktrees
 /.codex/**/__pycache__/
 /.codex/**/*.pyc
 /.xmake/
