@@ -1,7 +1,7 @@
-﻿--- @file xmake.lua
+--- @file xmake.lua
 --- @brief 项目构建入口
---- @details 定义顶层目标并挂载 OM 构建规则。
-set_project("oh-my-robot")
+--- @details 定义项目层可执行目标并挂载 OMR 底座构建规则。
+set_project("robot")
 set_xmakever("3.0.7")
 add_rules("mode.debug", "mode.release")
 set_policy("build.optimization.lto", false)
@@ -10,13 +10,14 @@ set_policy("build.optimization.lto", false)
 add_rules("plugin.compile_commands.autoupdate", {outputdir = os.projectdir()})
 
 includes("oh-my-robot")
+includes("../omr-robotics")
 
 --- @target robot_project
 --- @brief 项目主可执行目标
---- @details 聚合 OM 静态库并挂载构建规则。
+--- @details 聚合 OMR 底座静态库并由项目仓维护应用入口。
 target("robot_project")
     set_kind("binary") -- 编译为可执行镜像
     set_filename("robot_project.elf")
-    add_deps("tar_oh_my_robot")
+    add_deps("tar_oh_my_robot", "tar_omr_robotics")
     add_rules("oh_my_robot.context", "oh_my_robot.board_assets", "oh_my_robot.image_convert")
-    add_files(path.join("oh-my-robot", "samples", "motor", "p1010b", "main.c"))
+    add_files(path.join("app", "main.c"))
