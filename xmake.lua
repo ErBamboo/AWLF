@@ -9,8 +9,7 @@ set_policy("build.optimization.lto", false)
 --- @details 启用插件自动更新编译命令数据库。
 add_rules("plugin.compile_commands.autoupdate", {outputdir = os.projectdir()})
 
-includes("oh-my-robot")
-includes("../omr-robotics")
+includes("omr-robotics")
 
 --- @target robot_project
 --- @brief 项目主可执行目标
@@ -18,6 +17,6 @@ includes("../omr-robotics")
 target("robot_project")
     set_kind("binary") -- 编译为可执行镜像
     set_filename("robot_project.elf")
-    add_deps("tar_oh_my_robot", "tar_omr_robotics")
+    add_deps("tar_omr_robotics")
     add_rules("oh_my_robot.context", "oh_my_robot.board_assets", "oh_my_robot.image_convert")
     add_files(path.join("app", "main.c"))

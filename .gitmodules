@@ -1,4 +1,4 @@
-[submodule "oh-my-robot"]
-	path = oh-my-robot
-	url = https://github.com/oh-my-robot/oh-my-robot-framework.git
-	branch = integration
+[submodule "omr-robotics"]
+	path = omr-robotics
+	url = https://github.com/ErBamboo/omr-robotics.git
+	branch = main
